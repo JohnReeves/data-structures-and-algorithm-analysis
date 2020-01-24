@@ -1,0 +1,4 @@
+# general idea
+
+# hash function
+
