@@ -1,0 +1,21 @@
+000000000000063a <main>:
+ 63a:	55                   	push   rbp
+ 63b:	48 89 e5             	mov    rbp,rsp
+ 63e:	48 83 ec 10          	sub    rsp,0x10
+ 642:	c7 45 fc 00 00 00 00 	mov    DWORD PTR [rbp-0x4],0x0
+ 649:	eb 10                	jmp    65b <main+0x21>
+ 64b:	48 8d 3d a2 00 00 00 	lea    rdi,[rip+0xa2]        # 6f4 <_IO_stdin_used+0x4>
+ 652:	e8 b9 fe ff ff       	call   510 <puts@plt>
+ 657:	83 45 fc 01          	add    DWORD PTR [rbp-0x4],0x1
+ 65b:	83 7d fc 0a          	cmp    DWORD PTR [rbp-0x4],0xa
+ 65f:	7e ea                	jle    64b <main+0x11>
+ 661:	b8 00 00 00 00       	mov    eax,0x0
+ 666:	c9                   	leave  
+ 667:	c3                   	ret    
+ 668:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+ 66f:	00 
+
+0000000000000670 <__libc_csu_init>:
+ 670:	41 57                	push   r15
+ 672:	41 56                	push   r14
+ 674:	49 89 d7             	mov    r15,rdx
